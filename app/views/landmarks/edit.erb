@@ -2,8 +2,8 @@
 <h2><%=@landmark.name%></h2>
 
 
-<form action="/landmarks" method="post">
-  <p><strong>Landmark Name:</strong> <input type="text" id="landmark_name" name="landmark[name]"></p>
-  <p><strong>Landmark Year:</strong> <input type="text" id="landmark_year_completed" name="landmark[year_completed]"></p>
-  <input type="submit" name="Create New Landmark" value="Create New Landmark">
+<form action="/landmarks/<%=@landmark.id%>" method="post">
+  <p><strong>Edit Landmark Name:</strong> <input type="text" id="landmark_name" name="landmark[name]" value="<%=@landmark.name%>"></p>
+  <p><strong>Edit Landmark Year:</strong> <input type="text" id="landmark_year_completed" name="landmark[year_completed]" value="<%=@landmark.year_completed%>"></p>
+  <input type="submit" name="Edit Landmark" value="Edit Landmark">
 </form>
