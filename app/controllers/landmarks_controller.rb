@@ -10,8 +10,8 @@ class LandmarksController < ApplicationController
  end
 
  post '/landmarks' do
-  @landmark = Landmark.new(params[:landmark])
-
+    @landmark = Landmark.new(params[:landmark])
+    @landmark.save
    redirect "/landmarks/#{@landmark.id}"
  end
 
